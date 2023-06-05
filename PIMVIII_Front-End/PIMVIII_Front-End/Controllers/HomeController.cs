@@ -23,7 +23,7 @@ namespace PIMVIII_Front_End.Controllers
             return View();
         }
 
-        public IActionResult Buscar()
+        public IActionResult Listar()
         {
             return View();
         }

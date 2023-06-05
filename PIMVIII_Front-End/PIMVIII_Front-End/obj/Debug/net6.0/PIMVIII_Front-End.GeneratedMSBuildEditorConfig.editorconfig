@@ -24,6 +24,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PIM/PIM-VIII-ASP.NET/PIMVIII_Front-End/PIMVIII_Front-End/Views/Home/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PIM/PIM-VIII-ASP.NET/PIMVIII_Front-End/PIMVIII_Front-End/Views/Listar/Apagar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFyXEFwYWdhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PIM/PIM-VIII-ASP.NET/PIMVIII_Front-End/PIMVIII_Front-End/Views/Listar/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFyXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PIM/PIM-VIII-ASP.NET/PIMVIII_Front-End/PIMVIII_Front-End/Views/Listar/ListarCadastros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFyXExpc3RhckNhZGFzdHJvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PIM/PIM-VIII-ASP.NET/PIMVIII_Front-End/PIMVIII_Front-End/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
