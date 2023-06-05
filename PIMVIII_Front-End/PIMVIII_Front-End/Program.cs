@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PIMVIII_Front_End.Data;
+
 namespace PIMVIII_Front_End
 {
     public class Program
@@ -5,6 +8,11 @@ namespace PIMVIII_Front_End
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var conectionString = builder.Configuration.GetConnectionString("PessoaDAOConnection");
+
+            builder.Services.AddDbContext<PessoaDAO>(opts => opts.UseMySql(conectionString,
+                ServerVersion.AutoDetect(conectionString)));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

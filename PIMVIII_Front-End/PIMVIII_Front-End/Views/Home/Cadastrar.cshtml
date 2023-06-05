@@ -10,42 +10,11 @@
 </head>
 <body>
 
-    <form id="formPessoa">
-        <label for="nome">Nome Completo:
-            <input type="text" id="nome" name="nome" maxlength="256" oninput="limitarTamanho(this)">
-            <script>
-                function limitarTamanho(input) {
-                    if (input.value.length > input.maxLength) {
-                        input.value = input.value.slice(0, input.maxLength);
-                    }
-                }
-            </script>
-        <label for="nome">CPF:</label>
-            <input type="number" id="cpf" name="cpf" maxlength="11" oninput="limitarTamanho(this)">
-            <script>
-                function limitarTamanho(input) {
-                    if (input.value.length > input.maxLength) {
-                        input.value = input.value.slice(0, input.maxLength);
-                    }
-                }
-            </script>
-        </label><br><br />
-        
-        <label for="ddd">DDD:
-          
-            <input type="number" id="ddd" name="ddd" maxlength="2" oninput="limitarTamanho(this)">
-            <script>
-                function limitarTamanho(input) {
-                    if (input.value.length > input.maxLength) {
-                        input.value = input.value.slice(0, input.maxLength);
-                    }
-                }
-            </script>
-            </label>
-           
-
-        <label for="telefone">Telefone:
-                <input type="number" id="telefone" name="telefone" maxlength="9" oninput="limitarTamanho(this)">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Nome">Nome Completo:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" maxlength="256" oninput="limitarTamanho(this)">
                 <script>
                     function limitarTamanho(input) {
                         if (input.value.length > input.maxLength) {
@@ -53,116 +22,126 @@
                         }
                     }
                 </script>
-        
-            <label for="tipoTelefone">Tipo de Telefone Cadastrado:
-            <select id="tipoTelefone" name="tipoTelefone">
-            <option value="celular">Celular</option>
-            <option value="residencial">Residencial</option>
-            <option value="recado">Contato para recado</option>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="cpf">CPF:</label>
+                <input type="number" class="form-control" placeholder="000000000-00" maxlength="11" oninput="limitarTamanho(this)">
+                <script>
+                    function limitarTamanho(input) {
+                        if (input.value.length > input.maxLength) {
+                            input.value = input.value.slice(0, input.maxLength);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="form-group  col-md-1">
+            <label for="ddd">DDD:</label>
+            <input type="number" class="form-control" placeholder="(xx)" maxlength="2" oninput="limitarTamanho(this)">
+            <script>
+                function limitarTamanho(input) {
+                    if (input.value.length > input.maxLength) {
+                        input.value = input.value.slice(0, input.maxLength);
+                    }
+                }
+            </script>
+            </div>
+        <div class="form-group  col-md-3">
+            <label for="telefone">Telefone:</label>
+            <input type="number" class="form-control" placeholder="99999-9999" maxlength="9" oninput="limitarTamanho(this)">
+            <script>
+                function limitarTamanho(input) {
+                    if (input.value.length > input.maxLength) {
+                        input.value = input.value.slice(0, input.maxLength);
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="form-group col-md-5">
+            <label for="telefone">Telefone:</label>
+            <select id="telefone" class="form-control">
+                <option selected>Escolha o Tipo do telefone</option>
+                <option value="celular">Celular</option>
+                <option value="residencial">Residencial</option>
+                <option value="recado">Contato para recado</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-5">
+            <label for="logadouro">Endereço:</label>
+            <input type="text" class="form-control"placeholder="Rua, Av.,Alameda">
+            <div class ="form-group col-md-3">
+                <label for="numero">Numero:</label>
+                <input type="number" class="form-control"  placeholder="Numero da residência">
+            </div>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="cep">CEP:</label>
+            <input type="number" class="form-control" placeholder="00000-000" maxlength="8" oninput="limitarTamanho(this)">
+            <script>
+                function limitarTamanho(input) {
+                    if (input.value.length > input.maxLength) {
+                        input.value = input.value.slice(0, input.maxLength);
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="form-row col-md-5">
+            <div class="form-group col-md-4">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+        </div>
+
+
+        <div class="form-row col-md-5">
+            <div class="form-group col-md-4">
+                <label for="cidade">Cidade</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+
+            <div class="form-group col-md-5">
+                <label for="inputState">Estado:</label>
+                <select id="estado" class="form-control">
+                    <option selected>Escolha o estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
                 </select>
-            </label>
-        </label>
-        <br>
-        <br />
-        
-        <label for="endereco"><h2>Endereço</h2></label><br>
-
-        <table>
-            <label>
-            <label for="endereco">Logadouro:
-                        <input type="text" id="logadouro" name="logadouro" maxlength="256" oninput="limitarTamanho(this)">
-                        <script>
-                            function limitarTamanho(input) {
-                                if (input.value.length > input.maxLength) {
-                                    input.value = input.value.slice(0, input.maxLength);
-                                }
-                            }
-                        </script>
-            </label>
-        <label for="endereco"> Nº.:
-                <input type="text" id="numero" name="numero">
-                    <br />
-                </label>
-                </label>
-                <br>
-       
-        <br><label for="endereco">CEP:
-                    <input type="number" id="cep" name="cep" maxlength="8" oninput="limitarTamanho(this)">
-                    <script>
-                        function limitarTamanho(input) {
-                            if (input.value.length > input.maxLength) {
-                                input.value = input.value.slice(0, input.maxLength);
-                            }
-                        }
-                    </script>
-
-              <br>
-            </label>
-            
-        <label for="endereco">Bairro:
-                    <input type="text" id="bairro" name="bairro" maxlength="50" oninput="limitarTamanho(this)">
-                    <script>
-                        function limitarTamanho(input) {
-                            if (input.value.length > input.maxLength) {
-                                input.value = input.value.slice(0, input.maxLength);
-                            }
-                        }
-                    </script>
-        </label><br />
+            </div>
+        </div>
        
         <br/>
-        <label for="endereco">Cidade:
-                    <input type="text" id="cidade" name="cidade" maxlength="30" oninput="limitarTamanho(this)">
-                    <script>
-                        function limitarTamanho(input) {
-                            if (input.value.length > input.maxLength) {
-                                input.value = input.value.slice(0, input.maxLength);
-                            }
-                        }
-                    </script>
-        </label>
+    
 
-                <label for="estado">Estado:
-                <select id="estado" name="estado">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>
-                </label>
-        </table>
-        
-        <br><br />
-
-
-
-        <br><center><button type="submit">Salvar</button>
-        <button type="button" onclick="window.history.back()">Voltar</button>
-        </center>
-        <br/>
+        <button type="submit" class="btn btn-primary">Novo Cadastro</button>
     </form>
 </body>
 </html>
